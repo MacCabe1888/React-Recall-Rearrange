@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Bar, Clickable, Container, Footer, Header } from "./components";
+import choices from "./choices.json";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    choices,
+    score: 0,
+    highScore: 0
+  }
+
+  render() {
+    return (
+      <div>
+        <Bar score={this.state.score} highScore={this.state.highScore} />
+        <Header />
+        <Container>
+          {this.state.choices.map(clickable => (
+            <Clickable
+              key={clickable.id}
+              id={clickable.id}
+              shake={!this.state.score && this.state.highScore}
+              // handleClick={this.handleClick}
+              image={clickable.image}
+            />
+          ))}
+        </Container>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
