@@ -11,7 +11,7 @@ function Bar(props) {
         </li>
         <Message score={props.score} highScore={props.highScore} />
         <li>
-          Score: {props.score} | High Score: {props.highScore}
+          Round {props.currentRound} | Score: {props.score} | High Score: {props.highScore}
         </li>
       </ul>
     </nav>
