@@ -7,12 +7,12 @@ class Message extends Component {
     animating: false
   };
 
-  componentDidUpdate({ score, topScore }, prevState) {
+  componentDidUpdate({ score, highScore }, prevState) {
     const updatedState = { animating: true };
 
-    if (score === 0 && topScore === 0) {
+    if (score === 0 && highScore === 0) {
       updatedState.guess = "";
-    } else if (score === 0 && topScore > 0) {
+    } else if (score === 0 && highScore > 0) {
       updatedState.guess = "repeat";
     } else {
       updatedState.guess = "new";
