@@ -4,6 +4,7 @@ import "./style.css";
 function Header() {
   return (
     <header className="header">
+      {/* header content, including title and basic game instructions */}
       <h1>React, Recall, Rearrange!</h1>
       <h2>Click on an image to earn a point, but don't click on any image more than once in the same round!</h2>
     </header>

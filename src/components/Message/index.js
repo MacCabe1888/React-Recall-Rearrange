@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 
 class Message extends Component {
+  // using state for conditional rendering of text animations
   state = {
     guess: "",
     animating: false
@@ -10,6 +11,7 @@ class Message extends Component {
   componentDidUpdate({ score, highScore }, prevState) {
     const updatedState = { animating: true };
 
+    // changing state according to whether last guess was a new or repeat guess
     if (score === 0 && highScore === 0) {
       updatedState.guess = "";
     } else if (score === 0 && highScore > 0) {
@@ -18,11 +20,13 @@ class Message extends Component {
       updatedState.guess = "new";
     }
 
+    // setting state to changed state defined above
     if (score !== this.props.score || this.state.guess !== updatedState.guess) {
       this.setState(updatedState);
     }
   }
 
+  // rendering text according to state to display the appropriate message to the user
   renderText = () => {
     switch (this.state.guess) {
     case "new":
@@ -40,6 +44,7 @@ class Message extends Component {
         className={this.state.animating ? this.state.guess : ""}
         onAnimationEnd={() => this.setState({ animating: false })}
       >
+        {/* displaying the message here */}
         {this.renderText()}
       </li>
     );

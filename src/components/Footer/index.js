@@ -5,6 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="bottom">
+        {/* footer content */}
         <img alt="react" src="assets/images/logo.svg"/>
         React, Recall, Rearrange!
         <img alt="react" src="assets/images/logo.svg"/>
