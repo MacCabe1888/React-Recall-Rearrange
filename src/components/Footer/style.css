@@ -1,0 +1,26 @@
+.footer {
+  position: relative;
+  height: 100px;
+  overflow: auto;
+  background: aquamarine;
+  color: cornflowerblue;
+}
+
+.footer > .bottom {
+  position: absolute;
+  padding: 8px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: aqua;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 1px 1px blueviolet;
+}
+
+.footer > .bottom > img {
+  position: relative;
+  width: 30px;
+  top: 6px;
+  left: 2px;
+}

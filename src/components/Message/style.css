@@ -1,0 +1,37 @@
+.bar .new {
+  animation: .5s newGuess;
+}
+
+.bar .repeat {
+  animation: .5s repeatGuess;
+}
+
+@keyframes newGuess {
+  0% {
+    color: cornflowerblue;
+  }
+
+  50% {
+    color: blueviolet;
+    font-weight: bold;
+  }
+
+  100% {
+    color: cornflowerblue;
+  }
+}
+
+@keyframes repeatGuess {
+  0% {
+    color: cornflowerblue;
+  }
+
+  50% {
+    color: red;
+    font-weight: bold;
+  }
+
+  100% {
+    color: cornflowerblue;
+  }
+}

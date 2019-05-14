@@ -1,0 +1,42 @@
+.bar {
+  position: fixed;
+  min-height: 70px;
+  width: 100%;
+  box-shadow: 0 14px 28px aquamarine, 0 10px 10px turquoise;
+  background: turquoise;
+  color: cornflowerblue;
+  font-size: calc(10px + (24 - 10) * (100vw - 320px) / (1200 - 400));
+}
+
+.bar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.bar li {
+  display: inline-block;
+  width: 33.3%;
+  padding: 26px 0px;
+  text-align: center;
+}
+
+.bar a {
+  text-decoration: none;
+  color: cornflowerblue;
+  font-weight: 900;
+  text-shadow: 1px 1px blueviolet;
+}
+
+@media (max-width: 420px) {
+  .bar li:first-child {
+    width: 25%;
+  }
+
+  .bar li:nth-child(2) {
+    width: 35%;
+  }
+
+  .bar li:last-child {
+    width: 40%;
+  }
+}

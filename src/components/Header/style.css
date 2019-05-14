@@ -1,0 +1,15 @@
+.header {
+  min-height: 200px;
+  padding: 180px 20px; 
+  padding-bottom: 40px;
+  background-color: darkcyan;
+  color: bisque;
+  text-shadow: 1px 1px burlywood;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 4rem;
+}
