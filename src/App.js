@@ -77,7 +77,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{
+        backgroundImage: "url(/assets/images/spongebob-floral-background.png)",
+        backgroundRepeat: "repeat-x",
+        backgroundSize: "cover"
+      }}>
         <Bar
           currentRound={this.state.round}
           score={this.state.score}
